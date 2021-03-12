@@ -1,5 +1,5 @@
 # School-web-design-examination-work
-We ask in school to replicate a site by Brad Traversy
+We were asked in school to replicate a site by Brad Traversy
 
 # Work specification
 - HTML/CSS and PHP
