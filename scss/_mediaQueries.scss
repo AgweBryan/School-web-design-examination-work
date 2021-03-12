@@ -1,0 +1,244 @@
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+// 	.carousel-item {
+// 		&__inner {
+// 			h1 {
+// 				font-size: 1.3rem !important;
+// 				letter-spacing: 0 !important;
+// 			}
+
+// 			.btn-danger {
+// 				font-size: 0.5rem !important;
+// 				padding: 0.2rem !important;
+// 			}
+// 		}
+// 	}
+// }
+
+// // Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+	.carousel-item {
+		&__inner {
+			h1 {
+				font-size: 2.5rem !important;
+				letter-spacing: 0.1rem !important;
+			}
+
+			.btn-danger {
+				font-size: 0.5rem !important;
+				padding: 0.3rem !important;
+			}
+		}
+	}
+}
+
+// // Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+	.carousel-item {
+		&__inner {
+			h1 {
+				font-size: 3.5rem !important;
+				letter-spacing: 0.1rem !important;
+			}
+
+			.btn-danger {
+				font-size: 1rem !important;
+				padding: 0.5rem !important;
+			}
+		}
+	}
+}
+
+// // Extra large devices (large desktops, 1200px and up)
+@media (max-width: 992px) {
+	header {
+		.nav-top {
+			display: none;
+		}
+		.nav-middle {
+			display: none;
+		}
+		.nav-bottom {
+			.hit {
+				display: block !important;
+				opacity: 1 !important;
+				transition: opacity 0.5s ease-out;
+			}
+
+			.hit2 {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 770px) {
+	header {
+		.nav-bottom {
+			.main-nav {
+				.navigationer {
+					position: absolute;
+					background: #333;
+					padding: 1rem;
+					top: 71px;
+					z-index: 2;
+					height: 90vh;
+					position: fixed;
+					left: 0;
+					width: 442px;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					transform: translateX(-650px);
+					transition: transform 0.5s ease;
+
+					.links {
+						display: block;
+						text-align: center;
+						width: 100%;
+
+						li {
+							display: block;
+							width: 100%;
+							padding: 1rem 0;
+
+							a {
+								font-size: 2rem;
+							}
+
+							&:hover {
+								background: #444;
+							}
+						}
+
+						button {
+							padding: 1rem 0;
+							display: block;
+							font-size: 2rem;
+							width: 100%;
+							margin: 0 auto;
+							&:hover {
+								background: #444;
+							}
+						}
+					}
+				}
+
+				.hamburger {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 1rem;
+
+					.hamburger_icon {
+						width: 28px;
+						height: 4px;
+						border-radius: 4px;
+						background: #c4c4c4;
+						position: relative;
+						cursor: pointer;
+						transition: background 0.5s ease;
+
+						&::before,
+						&::after {
+							content: "";
+							position: absolute;
+							width: 28px;
+							height: 4px;
+							border-radius: 4px;
+							background: #c4c4c4;
+							left: 0;
+						}
+
+						&::before {
+							transform: translateY(-9px);
+							animation: topBarClosed 1s ease forwards;
+						}
+
+						&::after {
+							transform: translateY(9px);
+							animation: bottomBarClosed 1s ease forwards;
+						}
+					}
+				}
+
+				#checked:checked ~ .navigationer {
+					transform: translateX(0);
+				}
+
+				#checked:checked ~ .hamburger {
+					.hamburger_icon {
+						background: transparent !important;
+
+						&::before {
+							animation: topBar 1s ease forwards;
+						}
+
+						&::after {
+							animation: bottomBar 1s ease forwards;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// animations
+
+@keyframes topBar {
+	0% {
+		transform: translateY(-9px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(45deg);
+		width: 24px;
+		background: red;
+	}
+}
+@keyframes bottomBar {
+	0% {
+		transform: translateY(9px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(-45deg);
+		width: 24px;
+		background: red;
+	}
+}
+
+@keyframes topBarClosed {
+	0% {
+		transform: rotate(45deg);
+		width: 24px;
+		background: red;
+	}
+	50% {
+		transform: rotate(0);
+		background: #c4c4c4;
+	}
+	100% {
+		transform: translateY(-9px);
+		width: 28px;
+	}
+}
+
+@keyframes bottomBarClosed {
+	0% {
+		transform: rotate(-45deg);
+		background: red;
+	}
+	50% {
+		transform: rotate(0);
+		background: #c4c4c4;
+	}
+	100% {
+		transform: translateY(9px);
+	}
+}

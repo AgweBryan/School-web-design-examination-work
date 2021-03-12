@@ -1,0 +1,33 @@
+.jumbo {
+	width: 100vw;
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-image: url("../images/shoe3.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	padding: 2rem 1rem;
+}
+
+.jumbo p {
+	font-size: 1.6rem;
+}
+
+.jumbo h1 {
+	font-size: 4rem;
+}
+
+.jumbo::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	left: 0;
+	top: 0;
+}

@@ -1,0 +1,204 @@
+// @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+
+@import "./header";
+@import "./footer";
+@import "./mediaQueries";
+
+$amber: #ffc10f;
+$allText: #cfd8dc;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body {
+	overflow-x: hidden;
+	color: $allText;
+}
+
+.text-amber {
+	color: $amber;
+}
+
+#home {
+	min-height: 90vh;
+	width: 100vw;
+
+	#my-carousel {
+		width: 100vw;
+		min-height: 90vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.carousel-inner {
+			width: 100vw;
+			min-height: 90vh;
+
+			.carousel-item {
+				width: 100vw;
+				min-height: 90vh;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					background: rgba(0, 0, 0, 0.5);
+					width: 100vw;
+					min-height: 90vh;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+
+				&__inner {
+					width: 100vw;
+					min-height: 90vh;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.p-2 {
+						z-index: 3;
+						color: #fff;
+
+						h1 {
+							color: #fff;
+							font-size: 5rem;
+							text-shadow: 0.1rem 0.1rem 0.8rem black;
+							letter-spacing: 0.3rem;
+						}
+
+						.btn-danger {
+							background: $amber !important;
+							color: black;
+							border-radius: 0 !important;
+							padding: 1rem;
+							font-size: 1.8rem !important;
+							border: 0 !important;
+							transition: all 1s ease-out;
+
+							&:hover {
+								background: coral !important;
+								color: #eee !important;
+								box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+							}
+						}
+					}
+				}
+			}
+
+			.carousel-item-1 {
+				background-image: url("../images/shoe2.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			.carousel-item-2 {
+				background-image: url("../images/shoe3.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			.carousel-item-3 {
+				background-image: url("../images/shoe1.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		.carousel-control-prev-icon {
+			background: $amber;
+			text-align: center;
+			border-radius: 50%;
+			padding: 1rem;
+			color: #fff;
+			z-index: 999;
+			position: relative;
+
+			.fas {
+				position: absolute;
+				top: 0.5rem;
+				left: 0.4rem;
+			}
+		}
+		.carousel-control-next-icon {
+			background: $amber;
+			text-align: center;
+			border-radius: 50%;
+			padding: 1rem;
+			color: #fff;
+			z-index: 999;
+			position: relative;
+
+			.fas {
+				position: absolute;
+				top: 0.5rem;
+				right: 0.4rem;
+			}
+		}
+	}
+}
+
+.database {
+	background: #444;
+	.newsletter {
+		h3 {
+			color: #c4c4c4;
+		}
+		form {
+			input {
+				padding: 0.5rem;
+				border: 0;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				margin-right: 0.5rem;
+
+				&:focus {
+					border-radius: 0;
+					outline: 0 !important;
+				}
+			}
+			input[type="submit"] {
+				background: $amber;
+				color: #000;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+				font-size: 1.2rem;
+				font-weight: bold;
+				transition: background 1s ease-out;
+
+				&:hover {
+					background: coral;
+				}
+			}
+		}
+	}
+}
+
+.portfolio {
+	.text-center {
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+.Product {
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	.fa {
+		color: yellow !important;
+	}
+}

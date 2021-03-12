@@ -1,0 +1,14 @@
+@keyframes topBar {
+	0% {
+		transform: translateY(-9px);
+	}
+	50% {
+		transform: translateY(9px);
+		background: red;
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+@keyframes bottomBar {
+}
